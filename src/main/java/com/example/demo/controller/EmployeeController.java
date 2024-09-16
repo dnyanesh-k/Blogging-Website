@@ -43,6 +43,7 @@ public class EmployeeController {
 	
 	@GetMapping("/{id}")
 	public ResponseEntity<?> getEmpDetails(@PathVariable Long id) {
+		System.out.print(getClass());
 		return ResponseEntity.status(HttpStatus.ACCEPTED).body(empService.getEmpDetails(id));
 	}
 	
